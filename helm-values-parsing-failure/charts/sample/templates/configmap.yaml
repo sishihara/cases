@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "sample.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "sample.name" . }}
+    helm.sh/chart: {{ include "sample.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  VALUES: {{ range .Values.list_of_map }}{{ .foo }}-{{ .bar }},{{ end }}
