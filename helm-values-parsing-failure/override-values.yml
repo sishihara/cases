@@ -1,6 +1,16 @@
 
+# more entries causes more errors
+
 list_of_map:
   - foo: yi
     bar: er
   - foo: san
     bar: si
+  - foo: ichi
+    bar: ni
+  - foo: san
+    bar: si
+  - foo: go
+    bar: roku
+  - foo: nana
+    bar: hachi
